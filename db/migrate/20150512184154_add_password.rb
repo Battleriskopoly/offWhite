@@ -5,8 +5,5 @@ class AddPassword < ActiveRecord::Migration
     t.string :title
     t.timestamps null: false
   end
-  def change
 
-    add_column :posts, :string, :password
-  end
 end
