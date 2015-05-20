@@ -22,7 +22,6 @@ class PostsController < ApplicationController
     @styleSheet = "posts"
     if post_params[:key] == "LOPITS56"
       @post = Post.new(post_params)
-      @post.images.build(post_params[:images_attributes])
       if @post.save
         redirect_to post_url(@post)
       end
