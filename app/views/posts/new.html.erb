@@ -1,0 +1,20 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-6 col-md-offset-3 createPost">
+      <h1 class="green">Form a New Post</h1>
+      <%= form_for Post.new(), url: {action: 'create'}, html: {class: "verticalForm"} do |f| %>
+          <%= f.text_field :title, :value => "Title" %><br>
+          <%= f.file_field :main_blog_picture %>
+          <%= f.text_field :author, :value => "Author" %><br>
+          <%= f.text_area :body, :value => "Post", :class => "bigTextarea" %><br>
+          <%= f.text_field :twitter, :value => "Twitter" %><br>
+          <%= f.text_field :facebook, :value => "Facebook" %><br>
+          <%= f.text_field :googlePlus, :value => "Google Plus" %><br>
+          <%= f.text_field :pinterest, :value => "Pinterest" %><br>
+          <%= f.text_field :email, :value => "Email" %><br>
+          <%= f.text_field :key, :value => "Password" %><br>
+          <%= f.submit "Submit" %>
+      <% end %>
+    </div>
+  </div>
+</div>

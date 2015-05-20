@@ -10,9 +10,106 @@
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
 //
-//= require jquery
-//= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+var fieldVals = {};
+var marginTop;
+var o;
+var margin
+window.onload=function(){
+    setTimeout(function(){
+        console.log("called")
+    if ($(window).width() > 992) {
+        if (typeof $(".postInfo").offset() !== "undefined") {
+            if ($("#mainImage").width() / $(window).width() < $("#mainImage").height() / $(window).height()) {
+                margin = ($(window).height() - (($("#mainImage").height() * $(window).width()) / $("#mainImage").width())) / 2;
+                var settings = {
+                    top: "0",
+                    margin: margin + "px 0 0 0px",
+                    width: "100%"
+                };
+            } else {
+                margin = ($(window).width() - (($("#mainImage").width() * $(window).height()) / $("#mainImage").height())) / 2;
+                console.log(margin)
+                var settings = {
+                    top: "0",
+                    margin: "0 0 0 " + ( margin) + "px",
+                    height: "100%",
+                    width: "auto"
+                };
+            }
+            $("#mainImage").css("top", $(".postInfo").offset().top + $(".postInfo").height());
+            $("#body").css("margin-top", $("#mainImage").height() - $(".postInfo").height());
+            marginTop = $("#backgroundTrig").offset().top;
 
-var fieldVals={};$(window).ready(function(){$("#one").height()<$("#two").height()&&$(window).width()>767&&$("#one").css("height",$("#two").height()+"px");var i=TweenMax.to("#nav",.01,{background:"rgba(256, 256, 256,0.8)"}),e={width:"25%",margin:"calc(75% - 25px)"};e["margin-left"]="calc(75% - 25px)";var t=TweenMax.to("#mobileLogo",.01,e),o=$.superscrollorama({triggerAtCenter:!1,playoutAnimations:!0});o.addTween("#trigger",i,75,-75),o.addTween("#trigger",t,60,-15),$("#smallOne").height()>$("#largeOne").height()?$("#largeOne").css("height",$("#smallOne").height()):$("#smallOne").css("height",$("#largeOne").height()),$("#workTrig").click(function(){$("#work").animatescroll({padding:50})}),$("#connectTrig").click(function(){$("#connect").animatescroll({padding:50})}),$("#alexTrig").click(function(){$("#alex").animatescroll({padding:50})});for(var l=$("textarea,input[type=text]"),n=0;n<l.length;n++)fieldVals[l[n].id]=$(l[n]).val();$("textarea,input[type=text]").focus(function(){var i=fieldVals[this.id];i==$(this).val()&&($(this).val(""),$(this).css("color","#36393B"))}),$("textarea,input[type=text]").blur(function(){var i=fieldVals[this.id];(i==$(this).val()||""==$(this).val())&&($(this).val(i),$(this).css("color","rgba(0,0,0,.3)"))}),$("#mobileLogo").click(function(){$(window).width()<768&&($(".container-fluid").css("position","absolute"),$("body").css({padding:"0",overflow:"hidden"}),$("#mobileNav").css("display","inline"),$("#mobileNav").css("margin-top",$(window).scrollTop()),$("#mobileNav").css({width:document.documentElement.clientWidth,height:document.documentElement.clientHeight}),$("#mobileList").css("margin-top",(document.documentElement.clientHeight-$("#mobileList").height())/2),$("#mobileNav li").click(function(){$(".container-fluid").css("position","static"),$("body").css({padding:"15",overflow:"scroll"}),$("#mobileNav").css("display","none"),$("#"+this.id.replace("mobile","").toLowerCase()+"Trig").click(),$("#mobileNav").off("click")}),$("#mobileNav").click(function(){$(".container-fluid").css("position","static"),$("body").css({padding:"15",overflow:"scroll"}),$("html").css("overflow","scroll"),$("#mobileNav").css("display","none"),$("#mobileNav li").off("click")}))})}),$(window).resize(function(){$("#one").height()<$("#two").height()&&$(window).width()>768&&$("#one").attr("height",$("#two").height()+"px")});
+            var backgroundTween = TweenMax.to("#mainImage", .01, settings);
+            o.addTween("#backgroundTrig", backgroundTween, marginTop, -1 * marginTop);
+        }
+    } else {
+        if ($("#mainImage").width() / $(window).width() < $("#mainImage").height() / $(window).height()) {
+            $("#mainImage").css("width","100%");
+        } else {
+            $("#mainImage").css("height","100%");
+        }
+    }
+    },0);
+}
+$(window).ready( function() {
+    $("#one").height() < $("#two").height() && $(window).width() > 767 && $("#one").css("height", $("#two").height() + "px");
+    var i = TweenMax.to("#nav", .01, {background: "rgba(256, 256, 256,0.8)"}), e = {
+        width: "25%",
+        margin: "calc(75% - 25px)"
+    };
+    e["margin-left"] = "calc(75% - 25px)";
+    o = $.superscrollorama({triggerAtCenter: !1, playoutAnimations: !0});
+    var t = TweenMax.to("#mobileLogo", .01, e);
+    o.addTween("#trigger", i, 75, -75), o.addTween("#trigger", t, 60, -15), $("#smallOne").height() > $("#largeOne").height() ? $("#largeOne").css("height", $("#smallOne").height()) : $("#smallOne").css("height", $("#largeOne").height()), $(".workTrig").click(function () {
+        $("#work").animatescroll({padding: 50})
+    }), $(".connectTrig").click(function () {
+        $("#connect").animatescroll({padding: 50})
+    }), $("#alexTrig").click(function () {
+        $("#alex").animatescroll({padding: 50})
+    });
+
+    for (var l = $("textarea,input[type=text]").not(".editPost *"), n = 0; n < l.length; n++)fieldVals[l[n].id] = $(l[n]).val();
+    $("textarea,input[type=text]").not(".editPost *").focus(function () {
+        var i = fieldVals[this.id];
+        i == $(this).val() && ($(this).val(""), $(this).css("color", "#36393B"))
+    })
+        $("textarea,input[type=text]").not(".editPost *").blur(function () {
+        var i = fieldVals[this.id];
+        (i == $(this).val() || "" == $(this).val()) && ($(this).val(i), $(this).css("color", "rgba(0,0,0,.3)"))
+    })
+})
+$(window).resize(function () {
+    if ($(window).width() > 992) {
+        if (typeof $(".postInfo").offset() !== "undefined") {
+            marginTop = $("#backgroundTrig").offset().top
+            if ($("#mainImage").width() / $(window).width() < $("#mainImage").height() / $(window).height()) {
+                margin = ($(window).height() - (($("#mainImage").height() * $(window).width()) / $("#mainImage").width())) / 2;
+                var settings = {
+                    top: "0",
+                    margin: margin + "px 0 0 -12px",
+                    width: "100%"
+                };
+            } else {
+                margin = ($(window).width() - (($("#mainImage").width() * $(window).height()) / $("#mainImage").height())) / 2;
+                console.log(margin)
+                var settings = {
+                    top: "0",
+                    margin: "0 0 0 " + (-12 + margin) + "px",
+                    height: "100%",
+                    width: "auto"
+                };
+            }
+        }
+        $("#one").height() < $("#two").height() && $(window).width() > 768 && $("#one").attr("height", $("#two").height() + "px")
+    } else {
+        if ($("#mainImage").width() / $(window).width() < $("#mainImage").height() / $(window).height()) {
+            $("#mainImage").css("width","100%");
+        } else {
+            $("#mainImage").css("height","100%");
+        }
+            $("#mainImage").css({margin:"0 0 0 -12px"})
+    }
+});

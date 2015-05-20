@@ -1,5 +1,6 @@
 class StaticPagesController < ApplicationController
   def index
+    @styleSheet = "static_pages"
     @staticPage = StaticPage.new()
   end
 

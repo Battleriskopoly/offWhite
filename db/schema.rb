@@ -11,12 +11,30 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150509182418) do
+ActiveRecord::Schema.define(version: 20150517225607) do
+
+  create_table "comments", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.text     "body"
+    t.integer  "post_id"
+    t.integer  "user_id"
+  end
+
+  create_table "images", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string   "image"
+    t.integer  "post_id"
+  end
 
   create_table "inquiries", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
+
+# Could not dump table "posts" because of following NoMethodError
+#   undefined method `[]' for nil:NilClass
 
   create_table "static_pages", force: :cascade do |t|
     t.datetime "created_at",  null: false
@@ -25,6 +43,23 @@ ActiveRecord::Schema.define(version: 20150509182418) do
     t.string   "name"
     t.string   "email"
     t.string   "phone"
+  end
+
+  create_table "tags", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string   "name"
+  end
+
+  create_table "users", force: :cascade do |t|
+    t.string   "provider"
+    t.string   "uid"
+    t.string   "name"
+    t.string   "oauth_token"
+    t.datetime "oauth_expires_at"
+    t.datetime "created_at",       null: false
+    t.datetime "updated_at",       null: false
+    t.string   "email"
   end
 
 end

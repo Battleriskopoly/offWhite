@@ -1,0 +1,21 @@
+<div class="container-fluid">
+
+  <div class="row">
+    <div class="col-md-6 col-md-offset-3 editPost">
+      <h1 class="green">Edit a Post</h1>
+      <%= form_for @post, url: {action: 'update'}, html: {class: "verticalForm"} do |f| %>
+          <%= f.text_field :title, :value => @post.title %><br>
+          <%= f.file_field :main_blog_picture %>
+          <%= f.text_field :author, :value => @post.author %><br>
+          <%= f.text_area :body, :value => @post.body, :class => "bigTextarea" %><br>
+          <%= f.text_field :twitter, :value => "Twitter" %><br>
+          <%= f.text_field :facebook, :value => "Facebook" %><br>
+          <%= f.text_field :googlePlus, :value => "Google Plus" %><br>
+          <%= f.text_field :pinterest, :value => "Pinterest" %><br>
+          <%= f.text_field :email, :value => "Email" %><br>
+          <%= f.text_field :key, :value => "Password" %><br>
+          <%= f.submit "Submit" %>
+      <% end %>
+    </div>
+  </div>
+</div>
