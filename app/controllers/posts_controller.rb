@@ -8,7 +8,7 @@ class PostsController < ApplicationController
   def show
     @styleSheet = "posts"
     if request.location.latitude != 0.0 || request.location.latitude != 0.0
-      @timezone = Timezone::Zone.new :latlon => [0.0, 0.0]
+      @timezone = Timezone::Zone.new :latlon => [request.location.latitude, request.location.latitude]
       @timezone = @timezone.active_support_time_zone
     else
       @timezone = 'Eastern Time (US & Canada)'
