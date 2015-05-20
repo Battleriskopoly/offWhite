@@ -25,7 +25,7 @@ window.onload=function(){
                 margin = ($(window).height() - (($("#mainImage").height() * $(window).width()) / $("#mainImage").width())) / 2;
                 var settings = {
                     top: "0",
-                    margin: margin + "px 0 0 0px",
+                    margin:"0",
                     width: "100%"
                 };
             } else {
@@ -33,7 +33,7 @@ window.onload=function(){
                 console.log(margin)
                 var settings = {
                     top: "0",
-                    margin: "0 0 0 " + ( margin) + "px",
+                    margin:"0",
                     height: "100%",
                     width: "auto"
                 };

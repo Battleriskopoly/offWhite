@@ -1,6 +1,6 @@
-lock '3.4.0'
+lock '3.2.0'
 # application name and the github repository
-set :application, 'offwhite'
+set :application, 'offf_white'
 set :repo_url, 'https://github.com/Battleriskopoly/offWhite.git'
 
 # describe the rbenv environment we are deploying into

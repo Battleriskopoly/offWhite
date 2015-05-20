@@ -177,7 +177,6 @@
     <orderEntry type="library" scope="PROVIDED" name="omniauth (v1.2.2, RVM: ruby-2.0.0-p643) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="omniauth-google-oauth2 (v0.2.6, RVM: ruby-2.0.0-p643) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="omniauth-oauth2 (v1.3.0, RVM: ruby-2.0.0-p643) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="passenger (v5.0.7, RVM: ruby-2.0.0-p643) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="pg (v0.18.1, RVM: ruby-2.0.0-p643) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="puma (v2.11.2, RVM: ruby-2.0.0-p643) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="rack (v1.6.1, RVM: ruby-2.0.0-p643) [gem]" level="application" />
