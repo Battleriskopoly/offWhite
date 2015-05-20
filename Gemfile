@@ -26,7 +26,7 @@ gem 'rename'
 gem 'timezone'
 # Use SCSS for stylesheets
 gem 'redcarpet'
-gem 'bootstrap-sass', '~> 3.3.4'
+gem 'bootstrap-sass', '~> 3.3.4', group: :development
 gem 'sass-rails', '>= 3.2'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
