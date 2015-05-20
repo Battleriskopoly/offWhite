@@ -1,4 +1,3 @@
-lock '3.2.0'
 # application name and the github repository
 set :application, 'offf_white'
 set :repo_url, 'https://github.com/Battleriskopoly/offWhite.git'
