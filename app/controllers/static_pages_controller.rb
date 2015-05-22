@@ -1,6 +1,7 @@
 class StaticPagesController < ApplicationController
   def index
-    greetingList = ["Hia","Howdy", "Hey", "Welcome", "Konichiwa", "Yo", "Greetings", "Hello", "Salutations","Ní hâo"]
+    greetingList = ["Hia","Howdy", "Hey", "Welcome", "Konichiwa", "Yo", "Greetings", "Hello", "Salutations","Ní hâo",
+    "Bonjour"]
     @greeting = greetingList[rand(0..9)]
     @styleSheet = "static_pages"
     @staticPage = StaticPage.new()
