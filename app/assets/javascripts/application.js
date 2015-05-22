@@ -16,45 +16,51 @@ var fieldVals = {};
 var marginTop;
 var o;
 var margin
-window.onload=function(){
-    setTimeout(function(){
-        console.log("called")
-    if ($(window).width() > 992) {
-        if (typeof $(".postInfo").offset() !== "undefined") {
-            if ($("#mainImage").width() / $(window).width() < $("#mainImage").height() / $(window).height()) {
-                margin = ($(window).height() - (($("#mainImage").height() * $(window).width()) / $("#mainImage").width())) / 2;
-                var settings = {
-                    top: "0",
-                    margin:"0",
-                    width: "100%"
-                };
-            } else {
-                margin = ($(window).width() - (($("#mainImage").width() * $(window).height()) / $("#mainImage").height())) / 2;
-                console.log(margin)
-                var settings = {
-                    top: "0",
-                    margin:"0",
-                    height: "100%",
-                    width: "auto"
-                };
-            }
-            $("#mainImage").css("top", $(".postInfo").offset().top + $(".postInfo").height());
-            $("#body").css("margin-top", $("#mainImage").height() - $(".postInfo").height());
-            marginTop = $("#backgroundTrig").offset().top;
+window.onload = function () {
+    setTimeout(function () {
 
-            var backgroundTween = TweenMax.to("#mainImage", .01, settings);
-            o.addTween("#backgroundTrig", backgroundTween, marginTop, -1 * marginTop);
-        }
-    } else {
-        if ($("#mainImage").width() / $(window).width() < $("#mainImage").height() / $(window).height()) {
-            $("#mainImage").css("width","100%");
+        if ($(window).width() > 992) {
+            if (typeof $(".postInfo").offset() !== "undefined") {
+                if ($("#mainImage").width() / $(window).width() < $("#mainImage").height() / $(window).height()) {
+                    margin = ($(window).height() - (($("#mainImage").height() * $(window).width()) / $("#mainImage").width())) / 2;
+                    var settings = {
+                        top: "0",
+                        margin: "0",
+                        width: "100%"
+                    };
+                } else {
+                    margin = ($(window).width() - (($("#mainImage").width() * $(window).height()) / $("#mainImage").height())) / 2;
+                    console.log(margin)
+                    var settings = {
+                        top: "0",
+                        margin: "0",
+                        height: "100%",
+                        width: "auto"
+                    };
+                }
+                $("#mainImage").css("top", $(".postInfo").offset().top + $(".postInfo").height());
+                $("#body").css("margin-top", $("#mainImage").height() - $(".postInfo").height());
+                if ($("#backgroundTrig").length > 0) {
+                    marginTop = $("#backgroundTrig").offset().top;
+                }
+                var backgroundTween = TweenMax.to("#mainImage", .01, settings);
+                o.addTween("#backgroundTrig", backgroundTween, marginTop, -1 * marginTop);
+            }
         } else {
-            $("#mainImage").css("height","100%");
+            if ($("#mainImage").width() / $(window).width() < $("#mainImage").height() / $(window).height()) {
+                $("#mainImage").css("width", "100%");
+            } else {
+                $("#mainImage").css("height", "100%");
+            }
         }
-    }
-    },0);
+    }, 0);
 }
-$(window).ready( function() {
+$(document).ready(function () {
+    if ($(".indexPostImageRow").length > 0) {
+        $(".indexPostImageRow").each(function (index, value) {
+            $(this).find(".indexPostOpen").css("margin-top", -1 * ($(this).find(".indexPostOpen").height()));
+        });
+    }
     $("#one").height() < $("#two").height() && $(window).width() > 767 && $("#one").css("height", $("#two").height() + "px");
     var i = TweenMax.to("#nav", .01, {background: "rgba(256, 256, 256,0.8)"}), e = {
         width: "25%",
@@ -76,13 +82,18 @@ $(window).ready( function() {
         var i = fieldVals[this.id];
         i == $(this).val() && ($(this).val(""), $(this).css("color", "#36393B"))
     })
-        $("textarea,input[type=text]").not(".editPost *").blur(function () {
+    $("textarea,input[type=text]").not(".editPost *").blur(function () {
         var i = fieldVals[this.id];
         (i == $(this).val() || "" == $(this).val()) && ($(this).val(i), $(this).css("color", "rgba(0,0,0,.3)"))
     })
 })
 $(window).resize(function () {
     if ($(window).width() > 992) {
+        if ($(".indexPostImageRow").length > 0) {
+            $(".indexPostImageRow").each(function (index, value) {
+                $(this).find(".indexPostOpen").css("margin-top", -1 * ($(this).find(".indexPostOpen").height()));
+            });
+        }
         if (typeof $(".postInfo").offset() !== "undefined") {
             marginTop = $("#backgroundTrig").offset().top
             if ($("#mainImage").width() / $(window).width() < $("#mainImage").height() / $(window).height()) {
@@ -106,10 +117,10 @@ $(window).resize(function () {
         $("#one").height() < $("#two").height() && $(window).width() > 768 && $("#one").attr("height", $("#two").height() + "px")
     } else {
         if ($("#mainImage").width() / $(window).width() < $("#mainImage").height() / $(window).height()) {
-            $("#mainImage").css("width","100%");
+            $("#mainImage").css("width", "100%");
         } else {
-            $("#mainImage").css("height","100%");
+            $("#mainImage").css("height", "100%");
         }
-            $("#mainImage").css({margin:"0 0 0 -12px"})
+        $("#mainImage").css({margin: "0 0 0 -12px"})
     }
 });

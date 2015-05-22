@@ -15,7 +15,10 @@
  *= require_self
  */
 
-
+.row > div {
+  padding-left: 0;
+  padding-right: 0;
+}
 body {
   -webkit-font-smoothing: antialiased;
   padding: 15px 0 3px 0;
@@ -85,10 +88,20 @@ h2 {
 .noLink:hover {
   text-decoration: none;
 }
+
+.whiteLink {
+  color:white;
+}
+.whiteLink:hover {
+  color:white;
+}
 #homeLi:hover {
   border: none !important;
 }
-
+.indexHeader {
+  color:white;
+  text-align:center;
+}
 
 #nav li {
   margin-right:2.5%;
@@ -383,7 +396,9 @@ input[type=file] {
   width: 100%;
   height: 150px;
 }
-
+.indexPostCol {
+  padding-left:15px !important;
+}
 #postComment {
   margin-bottom: 30px;
   padding: 15px !important;
@@ -396,11 +411,11 @@ input[type=file] {
 .name {
   margin-left: 50px;
 }
-.row > div {
-  padding-left: 0 !important;
-  padding-right: 0 !important;
-}
+
 @media (max-width: 992px) {
+  .row  div {
+    margin: 0 !important;
+  }
   #footer > ul {
     list-style-type: none;
   }
@@ -505,7 +520,7 @@ input[type=file] {
     text-align: left
   }
   .marginContainer p, .marginContainer div {
-    background-color: #36393B;
+    background-color: #36393B !important;
     padding: 15px;
   }
   .marginContainer {
@@ -681,4 +696,29 @@ input[type=file] {
     margin: 25px
   }
 }
-
+.indexPostImage {
+  width:calc(100% + 15px);
+  margin-left:-15px;
+}
+.indexPostImageRow {
+  margin-bottom:75px;
+}
+.indexPostImageRow:nth-last-child(2) {
+  margin-bottom:15px;
+}
+.indexPostOpen {
+  position:absolute;
+  z-index:100;
+  margin-left:-15px;
+}
+.pager li > a {
+  border:none;
+  color: #36393B !important;
+  background-color: #FFA0AC;
+  -webkit-border-radius: 0;
+}
+.pager li > a:hover {
+  color: #36393B !important;
+  background-color: #FFA0AC;
+  -webkit-border-radius: 0;
+}

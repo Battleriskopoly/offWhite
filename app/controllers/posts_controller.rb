@@ -1,8 +1,23 @@
 class PostsController < ApplicationController
 
   def index
-    @styleSheet = "posts"
-    @posts = Post.all
+    @pagenumber = params[:pagenumber].to_i
+    if params[:pagenumber] == nil
+      @pagenumber = 1
+    end
+    if Post.all.length % 5 != 0 && @pagenumber == (Post.all.length/5.0).floor + 1
+      @pagenation = "newer"
+      @posts = Post.order("created_at")[0.. (Post.all.length % 5) - 1]
+    elsif Post.all.length - (5*@pagenumber) > -1
+      @posts = Post.order("created_at")[Post.all.length - 5*@pagenumber..(Post.all.length - 5*@pagenumber) + 5]
+      if @pagenumber == 1
+        @pagenation = "older"
+      else
+        @pagenation = "newerolder"
+      end
+    else
+      redirect_to posts_path
+    end
   end
 
   def show

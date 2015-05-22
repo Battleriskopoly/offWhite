@@ -1,2 +1,25 @@
-<%= render partial: "posts", collection: @posts, as: :post %>
-<%=link_to "Create", new_post_path%>
+<div class="container-fluid">
+
+  <div class=" row navbar navbar-default navbar-top blogNav" id="nav">
+    <div class="col-lg-12">
+      <ul>
+        <li id="homeLi"><a href="<%=root_path%>"><img id="navLogo" alt="Off White, Off White Web Design's Logo" src="http://az756089.vo.msecnd.net/offwhitecdn/square.svg"></a></li>
+      </ul>
+    </div>
+  </div>
+    <%= render partial: "posts", collection: @posts, as: :post %>
+  <div class="row">
+        <div class="col-md-12">
+          <nav>
+            <ul class="pager">
+              <%if @pagenation == "older" || @pagenation == "newerolder"%>
+                <li class="pagenation"><a  href="<%=posts_path%>/page/<%= @pagenumber + 1%>">Older</a></li>
+              <%end%>
+              <%if @pagenation == "newer" || @pagenation == "newerolder"%>
+                      <li class="pagenation"><a  href="<%=posts_path%>/page/<%= @pagenumber - 1%>">Newer</a></li>
+              <%end%>
+            </ul>
+          </nav>
+      </div>
+    </div>
+</div>
