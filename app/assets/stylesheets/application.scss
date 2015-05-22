@@ -72,25 +72,36 @@ h2 {
   margin-right: 0 !important
 }
 
-li, #blogNav li {
+.navEl {
   border-bottom: 0 solid #36393B;
   display: inline;
   color: #36393B;
   -webkit-transition: border-bottom .2s;
   margin-top: 15px
 }
-
+.navEl:hover {
+  border-bottom: 2px solid #36393B;
+}
+.noLink:hover {
+  text-decoration: none;
+}
 #homeLi:hover {
   border: none !important;
 }
 
-#nav li:last-child, #blogNav li:last-child {
-  margin-right: 0 !important
-}
 
-#nav li:hover, #blogNav li:hover {
-  border-bottom: 2px solid #36393B;
+#nav li {
+  margin-right:2.5%;
+  padding-right:2.5%;
+  border-right: 2px solid #36393B;
   display: inline;
+}
+#nav li:last-child, #blogNav li:last-child {
+  margin-right: 0 !important;
+  border-right: none;
+  padding-right:0;
+}
+#nav li:hover, #blogNav li:hover {
   color: #36393B
 }
 
@@ -100,6 +111,21 @@ li, #blogNav li {
   border: none;
   width: 100%
 }
+#nav ul {
+  margin: -15px 0 0 30px;
+  display: inline;
+  padding: 0;
+  width: 22.222222223%;
+}
+
+#nav.blogNav ul {
+  width: calc(16.666666667% - 15px);
+}
+
+#nav.blogNav {
+  position: absolute;
+}
+
 
 #blogNav ul {
   padding-left: 15px !important;
@@ -292,23 +318,6 @@ a {
   transition: color .2s
 }
 
-#nav ul {
-  margin: -15px 0 0 0;
-  padding-bottom: 5px;
-  -webkit-justify-content: space-around;
-  display: -webkit-flex;
-  display: flex;
-  padding: 0;
-  width: 22.222222223%;
-}
-
-#nav.blogNav ul {
-  width: calc(16.666666667% - 15px);
-}
-
-#nav.blogNav {
-  position: absolute;
-}
 
 a:hover {
   color: #99D17B
