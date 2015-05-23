@@ -21,7 +21,9 @@
 }
 body {
   -webkit-font-smoothing: antialiased;
+  text-shadow: 1px 1px 1px rgba(0,0,0,0.004);
   padding: 15px 0 3px 0;
+  overflow-x:hidden;
   font-family: "Courier New", monospace;
   text-align: left;
   font-size: 1.75em;
@@ -80,6 +82,9 @@ h2 {
   display: inline;
   color: #36393B;
   -webkit-transition: border-bottom .2s;
+  -moz-transition: border-bottom .2s;
+  -o-transition: border-bottom .2s;
+  transition: border-bottom .2s;
   margin-top: 15px
 }
 .navEl:hover {
@@ -276,7 +281,6 @@ input[type=submit] {
   color: #fff;
   background: #99D17B
 }
-
 ::-moz-selection {
   color: #fff;
   background: #99D17B
@@ -301,7 +305,10 @@ input[type=submit] {
 #companyInfo li, #socialMedia li {
   fill: #d5d3d0;
   color: #d5d3d0;
-  -webkit-transition: color .2s, fill .2s
+  -webkit-transition: color .2s, fill .2s;
+  -moz-transition: color .2s, fill .2s;
+  -o-transition: color .2s, fill .2s;
+  transition: color .2s, fill .2s;
 }
 
 #socialMediaPost li {
@@ -512,6 +519,8 @@ input[type=file] {
   #mobileBlogNav ul {
     padding: 0;
     -webkit-justify-content: space-around;
+    -moz-justify-content: space-around;
+    justify-content: space-around;
     display: -webkit-flex;
     display: flex;
   }
@@ -557,6 +566,8 @@ input[type=file] {
   #mobileNav ul {
     border: 0;
     -webkit-justify-content: space-around;
+    -moz-justify-content: space-around;
+    justify-content: space-around;
     display: -webkit-flex;
     display: flex;
     width: calc(100% - 80px);
@@ -577,8 +588,7 @@ input[type=file] {
     height: 200px;
     background-image: url(http://az756089.vo.msecnd.net/offwhitecdn/alex.png);
     background-size: 100% auto;
-    background-position:center ;
-    -webkit-clip-path: circle(100px at 100px 100px);
+    background-position:center;
     position: absolute
   }
   #bio {
@@ -602,7 +612,6 @@ input[type=file] {
     height: 200px;
     background-image: url(http://az756089.vo.msecnd.net/offwhitecdn/alex.png);
     background-size: 100% auto;
-    -webkit-clip-path: circle(100px at 100px 100px);
     position: absolute
   }
 
@@ -716,9 +725,13 @@ input[type=file] {
   color: #36393B !important;
   background-color: #FFA0AC;
   -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
 }
 .pager li > a:hover {
   color: #36393B !important;
   background-color: #FFA0AC;
   -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+   border-radius: 0;
 }
