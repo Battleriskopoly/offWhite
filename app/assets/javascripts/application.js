@@ -56,7 +56,9 @@ window.onload = function () {
     }, 0);
 }
 $(document).ready(function () {
+    console.log("calledImage")
     if ($(".indexPostImageRow").length > 0) {
+        console.log("calledImage")
         $(".indexPostImageRow").each(function (index, value) {
             $(this).find(".indexPostOpen").css("margin-top", -1 * ($(this).find(".indexPostOpen").height()));
         });
