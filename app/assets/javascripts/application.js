@@ -10,8 +10,11 @@
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
 //
-//= require turbolinks
+//= require jquery
+//= require jquery.turbolinks
+//= require jquery_ujs
 //= require_tree .
+
 var fieldVals = {};
 var marginTop;
 var o;
@@ -56,9 +59,8 @@ window.onload = function () {
     }, 0);
 }
 $(document).ready(function () {
-    console.log("calledImage")
     if ($(".indexPostImageRow").length > 0) {
-        console.log("calledImage")
+
         $(".indexPostImageRow").each(function (index, value) {
             $(this).find(".indexPostOpen").css("margin-top", -1 * ($(this).find(".indexPostOpen").height()));
         });
@@ -126,3 +128,4 @@ $(window).resize(function () {
         $("#mainImage").css({margin: "0 0 0 -12px"})
     }
 });
+//= require turbolinks
