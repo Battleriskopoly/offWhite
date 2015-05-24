@@ -3,7 +3,7 @@
   <div class="col-md-8 col-md-offset-2 <%=["pink","green"][rand(0..1)]%> postInfo indexPostCol">
     <h1 class="postTitle"><%= post.title %></h1>
 
-    <div class="author" id="trigger">by <span class="authorName"><%= post.author %></span>, published at <span class="authorName"><%= post.created_at.in_time_zone(@timezone).strftime("%l:%M %p - %b %d %Y") %></span></div>
+    <div class="author" id="trigger">by <span class="authorName"><%= post.author %></span>, published at <span class="authorName"><%= post.created_at.in_time_zone(@timezone).strftime("%l:%M %p %Z - %b %d %Y ") %></span></div>
     <ul id="socialMediaPost"><a href="<%=post.facebook%>" target="_blank">
       <li>
         <svg version="1.1" id="Capa_1" class="icon" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"

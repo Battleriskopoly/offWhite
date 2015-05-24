@@ -735,3 +735,17 @@ input[type=file] {
   -moz-border-radius: 0;
    border-radius: 0;
 }
+
+#nav {
+  color:#36393B;
+}
+#blogLi {
+  width:125px;
+  text-align:center;
+  margin-left:72.5px;
+  margin-top:15px;
+}
+#nav.blogNav li {
+  border-right:none;
+  border-left:none;
+}
