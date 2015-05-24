@@ -5,7 +5,7 @@ class PostsController < ApplicationController
     if params[:pagenumber] == nil
       @pagenumber = 1
     end
-    if Post.all.length % 5 != 0 && @pagenumber == (Post.all.length/5.0).floor + 1
+    if Post.all.length % 5 != 0 && @pagenumber == (Post.all.length/5.0).floor + 1 && @pagenumber != 1
       @pagenation = "newer"
       @posts = Post.order("created_at")[0.. (Post.all.length % 5) - 1]
     elsif Post.all.length - (5*@pagenumber) > -1
@@ -15,9 +15,10 @@ class PostsController < ApplicationController
       else
         @pagenation = "newerolder"
       end
-    else
-      redirect_to posts_path
-      end
+    elsif @pagenumber == 1
+      @pagenation = ""
+      @posts = Post.order("created_at")
+    end
   end
   def show
     @styleSheet = "posts"
