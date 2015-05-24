@@ -1,9 +1,6 @@
 class PostsController < ApplicationController
 
   def index
-    Post.destroy_all
-    redirect_to posts_path
-=begin
     @pagenumber = params[:pagenumber].to_i
     if params[:pagenumber] == nil
       @pagenumber = 1
@@ -21,7 +18,6 @@ class PostsController < ApplicationController
     else
       redirect_to posts_path
       end
-=end
   end
   def show
     @styleSheet = "posts"
