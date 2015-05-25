@@ -13,3 +13,4 @@ server 'offfwhite.cloudapp.net', user: 'pedersen', roles: %w{web app db}, primar
 set :deploy_to, "/home/#{fetch(:deploy_user)}/apps/#{fetch(:full_app_name)}"
 # set to production for Rails
 set :rails_env, :production
+set :nginx_server_name, "*.offfwhite.come"
