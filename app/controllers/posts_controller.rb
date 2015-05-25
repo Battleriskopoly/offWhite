@@ -11,7 +11,11 @@ class PostsController < ApplicationController
     elsif Post.all.length - (5*@pagenumber) > -1
       @posts = Post.order("created_at")[Post.all.length - 5*@pagenumber..(Post.all.length - 5*@pagenumber) + 5]
       if @pagenumber == 1
-        @pagenation = "older"
+        if Post.all.length - (5*@pagenumber) > 0
+          @pagenation = "older"
+        else
+          @pagenation = ""
+        end
       else
         @pagenation = "newerolder"
       end

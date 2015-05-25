@@ -216,7 +216,6 @@ li a, li a:hover {
 input, textarea, div[contenteditable=true] {
   border-radius: 0 !important;
   border: 2px solid #FFA0AC;
-  color: rgba(0, 0, 0, .3);
 }
 
 input[type=submit] {
@@ -262,7 +261,8 @@ input[type=submit] {
   transition: color .2s, fill .2s;
 }
 
-#socialMediaPost li {
+.socialMediaPost li {
+  display:inline;
   fill: white;
 }
 
@@ -356,6 +356,7 @@ input[type=file] {
 }
 .indexPostCol {
   padding-left:15px !important;
+  padding-right:15px !important;
 }
 #postComment {
   margin-bottom: 30px;
@@ -378,11 +379,22 @@ input[type=file] {
 /* Mobile */
 
 @media (max-width: 992px) {
+  .indexPostCol {
+    padding-left:15px !important;
+    padding-right:15px !important;
+  }
   #mobileNav ul {
     text-align:center;
   }
+  .navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle {
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+    background:rgba(256,256,256,0.8);
+    padding:7px;
+  }
   .navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
-    background:rgba(0,0,0,0);
+    background:rgba(256,256,256,0.8);
   }
   #mobileNav .navbar-collapse {
     border:none;
@@ -400,7 +412,6 @@ input[type=file] {
   }
   .navbar-default .navbar-toggle .icon-bar {
     background-color:#36393B;
-    border: 2px solid #99D17B;
   }
   .navbar-default .navbar-nav > li > a {
     color:#36393B;
@@ -416,12 +427,17 @@ input[type=file] {
     width:calc(100% + 30px);
     margin-left:-15px !important;
   }
+  .row.noMarginPost {
+    width:calc(100% + 15px);
+  }
   #intro p {
     text-align:center;
     margin-top: 15px;
     width: 100%
   }
-
+  .indexPostOpen {
+    margin-left: -30px !important;
+  }
   #intro {
     text-align:center;
   }
@@ -496,16 +512,16 @@ input[type=file] {
     width: 48px;
     height: 48px
   }
-  #socialMediaPost .icon {
+  .socialMediaPost .icon {
     width: 16.8% !important;
   }
-  #socialMediaPost li {
+  .socialMediaPost li {
     margin-right: 0;
   }
-  #socialMediaPost {
+  .socialMediaPost {
     padding-left: 0;
   }
-  #socialMediaPost li:last-child {
+  .socialMediaPost li:last-child {
     margin-right: 0;
   }
   .iconWithText {
@@ -563,10 +579,6 @@ input[type=file] {
   #mobileFirstRow {
     margin-top: 15px;
   }
-
-  .postInfo {
-    margin-top: 62px;
-  }
   #bioImage {
     margin-left:calc(50% - 100px);
     width: 200px;
@@ -593,11 +605,40 @@ input[type=file] {
   .greenTriangle {
     background-color:#99D17B;
   }
-
+  .indexPostImage {
+    width:calc(100% + 15px);
+    margin-left:-15px;
+  }
+  .indexPostOpen {
+    padding-top:0;
+    width:calc(100% + 45px)
+  }
+  .socialMediaPost {
+    margin-bottom:0;
+  }
+  .indexPostImageRow {
+    margin-bottom:0;
+  }
+  .showPostInfo {
+    margin-right:15px;
+    margin-left:15px;
+  }
+  .showMobileLogo {
+    margin-left:15px;
+  }
 }
 /* Desktop */
 
 @media (min-width: 993px) {
+  .indexPostOpen {
+    position:absolute;
+    z-index:100;
+    margin-left:-15px;
+  }
+  .indexPostColDesktop {
+    padding-left:15px !important;
+    padding-right:0 !important;
+  }
 
   .newTri {
     background-repeat: space;
@@ -691,12 +732,9 @@ input[type=file] {
     display: inline;
     padding-top: 42px
   }
-  #socialMediaPost {
+  .socialMediaPost {
     margin: 0;
     padding: 0 0 15px 0;
-  }
-  #socialMediaPost li {
-    display: inline;
   }
   #companyInfo, #socialMedia {
     height: 120px;
@@ -736,32 +774,30 @@ input[type=file] {
   #companyInfo li, #socialMedia li {
     margin-right: 7%
   }
-  #socialMediaPost li {
+  .socialMediaPost li {
     margin-right: 1.5%;
   }
-  #companyInfo li:last-child, #socialMedia li, #socialMediaPost li:last-child {
+  #companyInfo li:last-child, #socialMedia li, .socialMediaPost li:last-child {
     margin-left: 0
   }
   .marginContainer p {
     padding: 5px;
     margin: 25px
   }
+  .indexPostImage {
+    width:calc(100% + 30px);
+    margin-left:-15px;
+  }
+  .indexPostImageRow {
+    margin-bottom:75px;
+  }
 }
-.indexPostImage {
-  width:calc(100% + 15px);
-  margin-left:-15px;
-}
-.indexPostImageRow {
-  margin-bottom:75px;
-}
+
+
 .indexPostImageRow:nth-last-child(2) {
   margin-bottom:15px;
 }
-.indexPostOpen {
-  position:absolute;
-  z-index:100;
-  margin-left:-15px;
-}
+
 .pager li > a {
   border:none;
   color: #36393B !important;
