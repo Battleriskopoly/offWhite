@@ -56,7 +56,7 @@ window.onload = function () {
             }
         }
     }, 0);
-}
+};
 $(document).ready(function () {
     if ($(window).width() > 992) {
         if ($(".indexPostImageRow").length > 0) {
@@ -82,16 +82,20 @@ $(document).ready(function () {
         $("#alex").animatescroll({padding: 50})
     });
 
-    for (var l = $("textarea,input[type=text]").not(".editPost *"), n = 0; n < l.length; n++)fieldVals[l[n].id] = $(l[n]).val();
+    for (var l = $("textarea,input[type=text]").not(".editPost *"), n = 0; n < l.length; n++) {
+        fieldVals[l[n].id] = $(l[n]).val();
+    }
+    $("textarea,input[type=text]").not(".editPost *").css("color", "rgba(0,0,0,.3)");
     $("textarea,input[type=text]").not(".editPost *").focus(function () {
         var i = fieldVals[this.id];
         i == $(this).val() && ($(this).val(""), $(this).css("color", "#36393B"))
-    })
+    });
     $("textarea,input[type=text]").not(".editPost *").blur(function () {
         var i = fieldVals[this.id];
         (i == $(this).val() || "" == $(this).val()) && ($(this).val(i), $(this).css("color", "rgba(0,0,0,.3)"))
     })
-})
+
+});
 $(window).resize(function () {
     if ($(window).width() > 992) {
 
