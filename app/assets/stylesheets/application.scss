@@ -10,11 +10,11 @@
  * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
  * file per style scope.
  *
- * @import "bootstrap-sprockets";
- * @import "bootstrap";
+
  *= require_self
  */
-
+@import "bootstrap-sprockets";
+@import "bootstrap";
 .row > div {
   padding-left: 0;
   padding-right: 0;
@@ -380,6 +380,37 @@ input[type=file] {
 /* Mobile */
 
 @media (max-width: 992px) {
+  #mobileNav ul {
+    text-align:center;
+  }
+  .navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
+    background:rgba(0,0,0,0);
+  }
+  #mobileNav .navbar-collapse {
+    border:none;
+  }
+  #mobileNav {
+    border:none;
+    background:rgba(0,0,0,0);
+  }
+  .navbar-nav {
+    background-color:#FFA0AC;
+  }
+  #navToggleMobile {
+    border:none;
+    margin-top:15px;
+  }
+  .navbar-default .navbar-toggle .icon-bar {
+    background-color:#36393B;
+    border: 2px solid #99D17B;
+  }
+  .navbar-default .navbar-nav > li > a {
+    color:#36393B;
+  }
+  .navbar-toggle .icon-bar {
+    height:15px;
+    width:60px;
+  }
   #trigger {
     font-size:4em !important;
   }
@@ -534,35 +565,9 @@ input[type=file] {
   #mobileFirstRow {
     margin-top: 15px;
   }
-  #mobileNav li {
-    margin-bottom: 15px;
-    cursor: pointer;
-    color: #36393B;
-    text-align: center;
-  }
 
-  #mobileNav li:last-child {
-    margin-bottom: 0
-  }
-
-  #mobileNav ul {
-    border: 0;
-    -webkit-justify-content: space-around;
-    -moz-justify-content: space-around;
-    justify-content: space-around;
-    display: -webkit-flex;
-    display: flex;
-    width: calc(100% - 80px);
-    margin-left: 40px;
-    padding: 0;
-    list-style-type: none !important;
-  }
   .postInfo {
     margin-top: 62px;
-  }
-  #mobileNav {
-    border: 0;
-    background: rgba(256, 256, 256, .9)
   }
   #bioImage {
     margin-left:calc(50% - 100px);
@@ -674,9 +679,6 @@ input[type=file] {
     background-color: #36393B;
     padding: 25px !important;
     margin: 25px;
-  }
-  #mobileNav, #mobileBlogNav {
-    display: none;
   }
   .postTitle {
     text-align: center;
