@@ -15,17 +15,12 @@
       </ul>
     </div>
   </div>
-      <div class="col-xs-12 navbar navbar-default navbar-fixed-top home" id="mobileBlogNav">
-        <ul>
-          <li class="navEl"><%=link_to "Blog", posts_path%></li>
-          <li class="navEl"><a class="workTrig">Work</a></li>
-          <li class="navEl"><a class="connectTrig">Connect</a></li>
-        </ul>
+      <div class="row" >
+        <img id="mobileLogo" class="hideDesktop" alt="Off White, Off White Web Design's Logo" src="http://az756089.vo.msecnd.net/offwhitecdn/square.svg">
       </div>
-      </div>
-  <div class="row" id="mobileFirstRow">
+      <div class="row" id="mobileFirstRow">
     <div class="col-md-8">
-      <div id="intro">
+      <div id="intro" class="noMarginDivMobile">
         <h1 id="trigger"><%=@greeting%>,</h1>
 
         <h2>My Name's <a id="alexTrig">Alex</a></h2>
@@ -34,7 +29,7 @@
 
         <h2>My Agency's Offf White</h2>
 
-        <p> I am a UI and UX front end developer. I love design. And I love websites. But most of all I love
+        <p > I am a UI and UX front end developer. I love design. And I love websites. But most of all I love
           designing websites. My favorite kind of projects are the incredible ones that make the little guy
           extremely happy.
 
@@ -45,14 +40,14 @@
       <img id="logo" alt="Off White, Off White Web Design's Logo" src="http://az756089.vo.msecnd.net/offwhitecdn/square.svg">
     </div>
   </div>
-  <div class="row sectionHeader" id="nomargin">
+  <div class="row sectionHeader noMargin" id="nomargin">
     <div class="col-xs-12 pink">
       <div class="marginContainer">
         <h1>Simple Websites. All Included</h1>
       </div>
     </div>
   </div>
-  <div class="row">
+  <div class="row noMargin">
     <div class="col-lg-3 col-md-4 pinkTriangle" id="one">
       <div class="marginContainer">
         <h2>Original Design.<br> By Default.</h2>
@@ -67,7 +62,7 @@
     </div>
     <div class="col-lg-9 col-md-8" id="two">
       <div class="col-sm-12 green">
-        <div class="marginContainer">
+        <div class="marginContainer noMarginDivMobile">
           <h2>Tactful CMS. Standard.</h2>
 
           <p>
@@ -79,27 +74,27 @@
         </div>
       </div>
       <div class="col-sm-12 greenTriangle">
-        <div class="marginContainer">
+        <div class="marginContainer noMarginDivMobile">
           <h2>Modern and Nimble. From the Get Go. </h2>
 
           <p>
-            Most agencies use PHP as a platform make their websites. Unfortunately, the technology in its current form is begining to
+            Most agencies use PHP as a platform make their websites. Unfortunately, the technology in its current state is begining to
           resemble it's developers: old and bloated. Now a day's there are faster and smaller alternatives. The kinds of things
           successful startups like Twitter and Hulu use. Quicker execution at the base level of your website equals faster
-          page loads, cheaper servers, dollar signs and rainbows. In a world where visitors leave websites for three second
+          page loads, cheaper servers, dollar signs and rainbows. In a world where visitors leave for three second
            load times, fast and reliable matter.
         </div>
       </div>
     </div>
   </div>
-  <div class="row sectionHeader" id="alex">
+  <div class="row sectionHeader noMargin" id="alex">
     <div class="col-xs-12 pink">
       <div class="marginContainer">
         <h1>Heads Up:</h1>
       </div>
     </div>
   </div>
-  <div class="row" id="bioRow">
+  <div class="row noMargin" id="bioRow">
     <div class="col-md-10 col-md-offset-1">
       <div id="bioImage"></div>
       <div class="marginContainer">
@@ -115,7 +110,7 @@
       </div>
     </div>
   </div>
-  <div class="row sectionHeader" id="work">
+  <div class="row sectionHeader noMargin" id="work">
     <div class="col-xs-12 green">
       <div class="marginContainer">
         <h1>Work:</h1>
@@ -123,7 +118,7 @@
     </div>
   </div>
   <div class="bigPinkTri">
-    <div class="row center">
+    <div class="row center noMargin mobilePink">
       <div class="col-md-10 col-md-offset-1">
         <div class="marginContainer">
           <p>
@@ -136,7 +131,7 @@
         </div>
       </div>
     </div>
-    <div class="row center">
+    <div class="row center noMargin mobilePink">
       <div class="col-md-6 col-md-offset-3">
         <h1 class="green">Free Stuff!</h1>
         <div class="marginContainer">
@@ -151,14 +146,14 @@
       </div>
     </div>
   </div>
-  <div class="row sectionHeader" id="connect">
+  <div class="row sectionHeader noMargin" id="connect">
     <div class="col-xs-12 pink">
       <div class="marginContainer">
         <h1>Drop Me A line</h1>
       </div>
     </div>
   </div>
-  <div class="row center">
+  <div class="row center noMargin">
     <div class="col-xs-12 green">
       <div class="col-md-8 col-md-offset-2">
         <div class="marginContainer">
@@ -179,7 +174,7 @@
       </div>
     </div>
   </div>
-  <footer class="row " id="footer">
+  <footer class="row noMargin" id="footer">
     <ul class="col-lg-8 col-md-10 col-sm-12" id="companyInfo">
       <a class="noLink" href="http://en.wikipedia.org/wiki/Call_Me_%28Blondie_song%29" target="_blank">
       <li>

@@ -22,7 +22,6 @@
 body {
   -webkit-font-smoothing: antialiased;
   text-shadow: 1px 1px 1px rgba(0,0,0,0.004);
-  padding: 15px 0 3px 0;
   overflow-x:hidden;
   font-family: "Courier New", monospace;
   text-align: left;
@@ -153,28 +152,6 @@ h2 {
   margin-bottom: 15px;
 }
 
-.pinkTriangle {
-  background-image: url(http://az756089.vo.msecnd.net/offwhitecdn/trianglePink.svg);
-  background-size: 100% auto
-}
-
-.greenTriangle {
-  background-repeat: space;
-  background-image: url(http://az756089.vo.msecnd.net/offwhitecdn/triangleGreen.svg);
-  background-size: 100% auto
-}
-
-.pinkTri {
-  background-repeat: space;
-  background-image: url(http://az756089.vo.msecnd.net/offwhitecdn/pinkTri.svg);
-  background-size: auto 100%
-}
-
-.other {
-  background-repeat: space;
-  background-image: url(http://az756089.vo.msecnd.net/offwhitecdn/other.svg);
-  background-size: auto 100%
-}
 
 .marginContainer > h1, .marginContainer > h2 {
   margin: 25px
@@ -183,7 +160,6 @@ h2 {
 #intro {
   color: #36393B;
   margin-top: 75px;
-  margin-left: 25px;
   margin-bottom: 15px
 }
 
@@ -197,10 +173,6 @@ h2 {
   font-size: 4em
 }
 
-#intro p {
-  margin-top: 30px;
-  width: 90%
-}
 
 li a, li a:hover {
   cursor: pointer;
@@ -208,32 +180,13 @@ li a, li a:hover {
   text-decoration: inherit
 }
 
-#tie {
-  width: 50%;
-  margin-left: 25%
-}
 
-.triangleGreen {
-  background-repeat: space;
-  background-image: url(http://az756089.vo.msecnd.net/offwhitecdn/greenTriangle.svg);
-  background-size: 100% auto
-}
 
-.newTri {
-  background-repeat: space;
-  background-image: url(http://az756089.vo.msecnd.net/offwhitecdn/newtri.svg);
-  background-size: 100% auto
-}
 
 .sectionHeader {
   text-align: center
 }
 
-.bigPinkTri {
-  background-repeat: space;
-  background-size: 100% auto;
-  background-image: url(http://az756089.vo.msecnd.net/offwhitecdn/pinkTri.svg)
-}
 
 .sectionHeader {
   margin-top: 0
@@ -418,10 +371,39 @@ input[type=file] {
 .name {
   margin-left: 50px;
 }
+#mobileLogo {
+  margin-top:15px;
+  width:25%;
+}
+
+
+/* Mobile */
 
 @media (max-width: 992px) {
-  .row  div {
-    margin: 0 !important;
+  #trigger {
+    font-size:4em !important;
+  }
+  .row.noMargin {
+    width:calc(100% + 30px);
+    margin-left:-15px !important;
+  }
+  #intro p {
+    text-align:center;
+    margin-top: 15px;
+    width: 100%
+  }
+
+  #intro {
+    text-align:center;
+  }
+  .hideMobile {
+    display:none;
+  }
+  .noMarginDivMobile {
+    margin-left:0 !important;
+    margin-right:0 !important;
+    padding-left:0 !important;
+    padding-right:0 !important;
   }
   #footer > ul {
     list-style-type: none;
@@ -550,7 +532,7 @@ input[type=file] {
     text-align: center;
   }
   #mobileFirstRow {
-    margin-top: 62px;
+    margin-top: 15px;
   }
   #mobileNav li {
     margin-bottom: 15px;
@@ -592,21 +574,80 @@ input[type=file] {
     position: absolute
   }
   #bio {
-    margin: 215px 0 0 15px
+    margin: 215px 0 0 0
   }
-
+  #new_static_page {
+    margin-left:10px;
+  }
   #bioRow {
     padding-bottom: 25px;
     padding-top: 15px;
-    background-image: url(https://offfwhite.blob.core.windows.net/offwhitecdn/circle.svg);
-    background-size: 400px 400px;
-    background-position: center;
-    background-repeat: space
+    background-color:#99D17B;
+  }
+  .bigPinkTri, .pinkTriangle, .pinkTri,.mobilePink {
+    background-color:#FFA0AC;
+  }
+  .greenTriangle {
+    background-color:#99D17B;
   }
 
 }
+/* Desktop */
 
 @media (min-width: 993px) {
+
+  .newTri {
+    background-repeat: space;
+    background-image: url(http://az756089.vo.msecnd.net/offwhitecdn/newtri.svg);
+    background-size: 100% auto
+  }
+  .triangleGreen {
+    background-repeat: space;
+    background-image: url(http://az756089.vo.msecnd.net/offwhitecdn/greenTriangle.svg);
+    background-size: 100% auto
+  }
+  .bigPinkTri {
+    background-repeat: space;
+    background-size: 100% auto;
+    background-image: url(http://az756089.vo.msecnd.net/offwhitecdn/pinkTri.svg)
+  }
+
+  .pinkTriangle {
+    background-image: url(http://az756089.vo.msecnd.net/offwhitecdn/trianglePink.svg);
+    background-size: 100% auto
+  }
+
+  .greenTriangle {
+    background-repeat: space;
+    background-image: url(http://az756089.vo.msecnd.net/offwhitecdn/triangleGreen.svg);
+    background-size: 100% auto
+  }
+
+  .pinkTri {
+    background-repeat: space;
+    background-image: url(http://az756089.vo.msecnd.net/offwhitecdn/pinkTri.svg);
+    background-size: auto 100%
+  }
+
+  .other {
+    background-repeat: space;
+    background-image: url(http://az756089.vo.msecnd.net/offwhitecdn/other.svg);
+    background-size: auto 100%
+  }
+  #intro {
+    margin-left: 25px;
+
+  }
+  #intro p {
+    margin-top: 30px;
+    width: 90%
+  }
+  body {
+    padding: 15px 0 3px 0;
+  }
+  .hideDesktop {
+    display:none;
+  }
   #bioImage {
     margin-top:15px;
     width: 200px;

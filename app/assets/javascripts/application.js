@@ -72,7 +72,7 @@ $(document).ready(function () {
     };
     e["margin-left"] = "calc(75% - 25px)";
     o = $.superscrollorama({triggerAtCenter: !1, playoutAnimations: !0});
-    var t = TweenMax.to("#mobileLogo", .01, e);
+    var t = TweenMax.to("#no", .01, e);
     o.addTween("#trigger", i, 75, -75), o.addTween("#trigger", t, 60, -15), $("#smallOne").height() > $("#largeOne").height() ? $("#largeOne").css("height", $("#smallOne").height()) : $("#smallOne").css("height", $("#largeOne").height()), $(".workTrig").click(function () {
         $("#work").animatescroll({padding: 50})
     }), $(".connectTrig").click(function () {
