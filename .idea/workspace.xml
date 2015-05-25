@@ -28,9 +28,14 @@
       <file leaf-file-name="index.html.erb" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/static_pages/index.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.2382104">
-              <caret line="245" column="52" selection-start-line="245" selection-start-column="52" selection-end-line="245" selection-end-column="52" />
-              <folding />
+            <state vertical-scroll-proportion="6.819831">
+              <caret line="376" column="8" selection-start-line="376" selection-start-column="8" selection-end-line="376" selection-end-column="8" />
+              <folding>
+                <element signature="n#style#0;n#svg#0;n#li#0;n#a#0;n#ul#1;n#footer#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#svg#0;n#li#0;n#a#2;n#ul#1;n#footer#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#svg#0;n#li#0;n#a#3;n#ul#1;n#footer#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#svg#0;n#li#0;n#a#4;n#ul#1;n#footer#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -38,8 +43,8 @@
       <file leaf-file-name="application.scss" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/application.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="16.254902">
-              <caret line="626" column="21" selection-start-line="626" selection-start-column="21" selection-end-line="626" selection-end-column="21" />
+            <state vertical-scroll-proportion="-16.764706">
+              <caret line="57" column="27" selection-start-line="57" selection-start-column="21" selection-end-line="57" selection-end-column="27" />
               <folding />
             </state>
           </provider>
@@ -846,17 +851,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/application.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="16.254902">
-          <caret line="626" column="21" selection-start-line="626" selection-start-column="21" selection-end-line="626" selection-end-column="21" />
+        <state vertical-scroll-proportion="-16.764706">
+          <caret line="57" column="27" selection-start-line="57" selection-start-column="21" selection-end-line="57" selection-end-column="27" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/static_pages/index.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.2382104">
-          <caret line="245" column="52" selection-start-line="245" selection-start-column="52" selection-end-line="245" selection-end-column="52" />
-          <folding />
+        <state vertical-scroll-proportion="6.819831">
+          <caret line="376" column="8" selection-start-line="376" selection-start-column="8" selection-end-line="376" selection-end-column="8" />
+          <folding>
+            <element signature="n#style#0;n#svg#0;n#li#0;n#a#0;n#ul#1;n#footer#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#svg#0;n#li#0;n#a#2;n#ul#1;n#footer#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#svg#0;n#li#0;n#a#3;n#ul#1;n#footer#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#svg#0;n#li#0;n#a#4;n#ul#1;n#footer#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
