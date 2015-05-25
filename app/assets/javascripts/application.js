@@ -18,7 +18,7 @@
 var fieldVals = {};
 var marginTop;
 var o;
-var margin
+var margin;
 window.onload = function () {
     setTimeout(function () {
 
@@ -33,7 +33,6 @@ window.onload = function () {
                     };
                 } else {
                     margin = ($(window).width() - (($("#mainImage").width() * $(window).height()) / $("#mainImage").height())) / 2;
-                    console.log(margin)
                     var settings = {
                         top: "0",
                         margin: "0",
@@ -95,6 +94,7 @@ $(document).ready(function () {
 })
 $(window).resize(function () {
     if ($(window).width() > 992) {
+
         if ($(".indexPostImageRow").length > 0) {
             $(".indexPostImageRow").each(function (index, value) {
                 $(this).find(".indexPostOpen").css("margin-top", -1 * ($(this).find(".indexPostOpen").height()));
