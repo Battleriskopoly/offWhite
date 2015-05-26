@@ -555,7 +555,7 @@ input[type=file] {
     text-align: left
   }
   .marginContainer p, .marginContainer div {
-    background-color: #36393B !important;
+    background:#36393B;
     padding: 15px;
   }
   .marginContainer {
@@ -596,7 +596,6 @@ input[type=file] {
   #bioRow {
     padding-bottom: 25px;
     padding-top: 15px;
-    background-color:#99D17B;
   }
   .bigPinkTri, .pinkTriangle, .pinkTri,.mobilePink {
     background-color:#FFA0AC;
@@ -628,10 +627,19 @@ input[type=file] {
   body {
     font-size: 1.5em;
   }
+  #bioRow {
+    background-color:#FFA0AC;
+  }
+  .mobileClear {
+    background-color:#FFA0AC;
+  }
 }
 /* Desktop */
 
 @media (min-width: 993px) {
+  #bioRow {
+    background-color:#99D17B;
+  }
   body {
     font-size: 1.75em;
   }
