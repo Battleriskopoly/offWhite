@@ -23,7 +23,6 @@ body {
   overflow-x:hidden;
   font-family: "Courier New", monospace;
   text-align: left;
-  font-size: 1.75em;
   color: white;
 
 }
@@ -224,7 +223,7 @@ input[type=submit] {
 }
 
 ::-webkit-scrollbar {
-  display: none
+  display:none;
 }
 
 ::selection {
@@ -626,10 +625,16 @@ input[type=file] {
   .showMobileLogo {
     margin-left:15px;
   }
+  body {
+    font-size: 1.5em;
+  }
 }
 /* Desktop */
 
 @media (min-width: 993px) {
+  body {
+    font-size: 1.75em;
+  }
   .indexPostOpen {
     position:absolute;
     z-index:100;
