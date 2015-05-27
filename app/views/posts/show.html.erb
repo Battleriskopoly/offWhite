@@ -1,6 +1,8 @@
 <head>
   <title><%=@post.title%> | Offf White Web Design,  Harrisburg PA | UI/UX Website Design and Development</title>
   <meta name="description" content="<%= @post.body[0..500] %>...">
+  <link rel="image_src" href="<%=@post.main_blog_picture.url%>" />
+  <meta property='og:image' content='<%=@post.main_blog_picture.url%>'/>
 
 </head>
 <nav class="navbar navbar-default hideDesktop navbar-fixed-top" id="mobileNav">
