@@ -602,8 +602,14 @@ input[type=file] {
   .bigPinkTri, .pinkTriangle, .pinkTri,.mobilePink {
     background-color:#FFA0AC;
   }
-  .greenTriangle {
+  .greenTriangle, .mobileGreen {
     background-color:#99D17B;
+  }
+  .mobilePink {
+    background-color:#FFA0AC !important;
+  }
+  .mobileGreen {
+    background-color:#99D17B !important;
   }
   .indexPostImage {
     width:calc(100% + 15px);
