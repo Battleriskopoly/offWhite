@@ -18,7 +18,8 @@
 
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-        <li><%= link_to "Home", root_path%></li>
+        <li><a href="<%= root_path%>#work">Work</a></li>
+        <li><a href="<%= root_path%>#connect">Connect</a></li>
         <li><%= link_to "Blog", posts_path%></li>
       </ul>
     </div>
@@ -26,7 +27,7 @@
 </nav>
 <div class="container-fuild">
   <div class="row">
-    <img id="mobileLogo" class="hideDesktop showMobileLogo" alt="Off White, Off White Web Design's Logo" src="http://az756089.vo.msecnd.net/offwhitecdn/square.svg">
+    <a href="<%=root_url%>"><img id="mobileLogo" class="hideDesktop showMobileLogo" alt="Off White, Off White Web Design's Logo" src="http://az756089.vo.msecnd.net/offwhitecdn/square.svg"></a>
   </div>
   <div class="row" >
     <div class="col-xs-12">
@@ -34,9 +35,12 @@
         <div class="col-lg-12">
           <ul>
             <li  id="homeLi" class=noBorder"><a  href="<%=root_path%>"><img id="navLogo" alt="Off White, Off White Web Design's Logo" src="http://az756089.vo.msecnd.net/offwhitecdn/square.svg"></a></li>
-            <br><br><li class="noBorder navEl" id="blogLi"><a  href="<%=posts_path%>">Blog</a></li>
+          </ul><br>
+          <ul id="linksList">
+            <li><a href="<%=root_path%>#work" >Work</a></li>
+            <li><a href="<%=root_path%>#connect" >Connect</a></li>
+            <li><a href="<%=posts_path%>" >Blog</a></li>
           </ul>
-
         </div>
       </div>
       <div class="col-md-8 col-md-offset-2 pink postInfo showPostInfo">

@@ -16,7 +16,9 @@
 
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-        <li><%= link_to "Home", root_path%></li>
+        <li><a href="<%= root_path%>#work">Work</a></li>
+        <li><a href="<%= root_path%>#connect">Connect</a></li>
+        <li><%= link_to "Blog", posts_path%></li>
       </ul>
     </div>
   </div>
@@ -27,12 +29,17 @@
     <div class="col-lg-12">
       <ul>
         <li id="homeLi"><a href="<%=root_path%>"><img id="navLogo" alt="Off White, Off White Web Design's Logo" src="http://az756089.vo.msecnd.net/offwhitecdn/square.svg"></a></li>
-      </ul>
 
+      </ul><br>
+      <ul id="linksList">
+        <li><a href="<%=root_path%>#work" >Work</a></li>
+        <li><a href="<%=root_path%>#connect" >Connect</a></li>
+        <li><a href="<%=posts_path%>" >Blog</a></li>
+      </ul>
     </div>
   </div>
   <div class="row">
-    <img id="mobileLogo" class="hideDesktop" alt="Off White, Off White Web Design's Logo" src="http://az756089.vo.msecnd.net/offwhitecdn/square.svg">
+    <a href="<%=root_path%>"><img id="mobileLogo" class="hideDesktop" alt="Off White, Off White Web Design's Logo" src="http://az756089.vo.msecnd.net/offwhitecdn/square.svg"></a>
   </div>
     <%= render partial: "posts", collection: @posts, as: :post %>
   <div class="row">

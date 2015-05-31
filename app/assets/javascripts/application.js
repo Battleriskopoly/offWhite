@@ -19,6 +19,7 @@ var fieldVals = {};
 var marginTop;
 var o;
 var margin;
+var padding =50;
 window.onload = function () {
     setTimeout(function () {
 
@@ -41,7 +42,7 @@ window.onload = function () {
                     };
                 }
                 $("#mainImage").css("top", $(".postInfo").offset().top + $(".postInfo").height());
-                $("#body").css("margin-top", $("#mainImage").height() - $(".postInfo").height());
+                $("#body").css("margin-top", $("#mainImage").height() + ($(".postInfo").height()/2));
                 if ($("#backgroundTrig").length > 0) {
                     marginTop = $("#backgroundTrig").offset().top;
                 }
@@ -49,16 +50,29 @@ window.onload = function () {
                 o.addTween("#backgroundTrig", backgroundTween, marginTop, -1 * marginTop);
             }
         } else {
+            padding=0;
             if ($("#mainImage").width() / $(window).width() < $("#mainImage").height() / $(window).height()) {
                 $("#mainImage").css("width", "100%");
             } else {
                 $("#mainImage").css("height", "100%");
             }
+            var navMain = $("#bs-example-navbar-collapse-1");
+
+            navMain.on("click", "a", null, function () {
+                navMain.collapse('hide');
+            });
         }
     }, 0);
 };
 $(document).ready(function () {
     if ($(window).width() > 992) {
+        if ($("#one").height() > $("#two").height()) {
+            $("#one").css("height","auto");
+            $("#two").css("height",$("#one").height());
+        } else {
+            $("#two").css("height","auto");
+            $("#one").css("height",$("#two").height());
+        }
         if ($(".indexPostImageRow").length > 0) {
 
             $(".indexPostImageRow").each(function (index, value) {
@@ -75,11 +89,11 @@ $(document).ready(function () {
     o = $.superscrollorama({triggerAtCenter: !1, playoutAnimations: !0});
     var t = TweenMax.to("#no", .01, e);
     o.addTween("#trigger", i, 75, -75), o.addTween("#imageTrigger", t, 60, -15), $("#smallOne").height() > $("#largeOne").height() ? $("#largeOne").css("height", $("#smallOne").height()) : $("#smallOne").css("height", $("#largeOne").height()), $(".workTrig").click(function () {
-        $("#work").animatescroll({padding: 50})
+        $("#work").animatescroll({padding: padding})
     }), $(".connectTrig").click(function () {
-        $("#connect").animatescroll({padding: 50})
+        $("#connect").animatescroll({padding: padding})
     }), $("#alexTrig").click(function () {
-        $("#alex").animatescroll({padding: 50})
+        $("#alex").animatescroll({padding: padding})
     });
 
     for (var l = $("textarea,input[type=text]").not(".editPost *"), n = 0; n < l.length; n++) {
@@ -98,7 +112,14 @@ $(document).ready(function () {
 });
 $(window).resize(function () {
     if ($(window).width() > 992) {
-
+        if ($("#one").height() > $("#two").height()) {
+            $("#one").css("height","auto");
+            $("#two").css("height",$("#one").height());
+        } else {
+            $("#two").css("height","auto");
+            $("#one").css("height",$("#two").height());
+        }
+        padding=50;
         if ($(".indexPostImageRow").length > 0) {
             $(".indexPostImageRow").each(function (index, value) {
                 $(this).find(".indexPostOpen").css("margin-top", -1 * ($(this).find(".indexPostOpen").height()));
@@ -126,6 +147,8 @@ $(window).resize(function () {
         }
         $("#one").height() < $("#two").height() && $(window).width() > 768 && $("#one").attr("height", $("#two").height() + "px")
     } else {
+        $("#one,#two").css("height","auto");
+        padding=0;
         if ($("#mainImage").width() / $(window).width() < $("#mainImage").height() / $(window).height()) {
             $("#mainImage").css("width", "100%");
         } else {
